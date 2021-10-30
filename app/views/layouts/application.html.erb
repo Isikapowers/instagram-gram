@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Instagram</title>
+    <title>Instagram-gram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,7 +16,7 @@
        <div class="logo">
          <a class="navbar-brand" href="#">
            <%= fa_stacked_icon "camera inverse", base: "circle"%>
-           Instagram
+           Instagram-gram
          </a>
        </div>
        <div class="m-auto">
@@ -27,7 +27,15 @@
        <div class="user-section">
          <a><i class="fa fa-compass"></i></a>
          <a><i class="fa fa-heart"></i></a>
-         <a><i class="fa fa-user"></i></a>
+         <% if user_signed_in? %>
+          <a href="<%= user_path(current_user) %>">
+            <i class="fa fa-user"></i>
+          </a>
+        <% else %>
+          <a href="<%= new_user_session_path%>">
+            <i class="fa fa-sign-in"></i>
+          </a>
+        <% end %>
        </div>
      </div>
    </nav>
@@ -56,7 +64,7 @@
          <li>HASHTAGS</li>
          <li>LANGUAGE</li>
        </ul>
-       <p> © 2018 INSTAGRAM </p>
+       <p> © 2021 INSTAGRAM-GRAM </p>
      </nav>
    </footer>
  </body>
