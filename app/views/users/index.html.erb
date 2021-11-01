@@ -1,0 +1,9 @@
+<h1>Welcome to Instagram-gram!</h1><br>
+
+<% if user_signed_in? %>
+   <p>Hi, <%= current_user.name %>!  What would you like to do today?</p>
+  <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+  <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+<% else %>
+  <p>Please <%= link_to new_user_session_path %> or <%= link_to new_user_registration_path %> for an account.</p>
+<% end %>
