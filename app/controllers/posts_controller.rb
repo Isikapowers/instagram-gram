@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc)
   end
 
   def create
@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post..find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def destroy
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     redirect_to user_path(current_user)
-  end      
+  end
 
   private
 
