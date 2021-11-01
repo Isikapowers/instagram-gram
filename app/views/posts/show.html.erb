@@ -7,7 +7,7 @@
       <div class="avatar">
         <% if @post.user.avatar.attached? %>
           <%= link_to user_path(@post.user) do %>
-            <%= image_tag @post.user.avatar %>
+            <%= image_tag @post.user.avatar, class: "avatar" %>
           <% end %>
         <% end %>
       </div>
