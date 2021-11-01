@@ -47,8 +47,8 @@
   <div class="user-images">
     <% @posts.each do |post|%>
       <div class="wrapper">
-        <%=link_to "Delete", post_path(post), { controller: "posts", action: :destroy, method: :delete, data: { confirm: "Are you sure you want to delete it?" } } %>
-          <%=image_tag post.image %>
+        <%= image_tag post.image %>
+        <%= button_to "Delete", post_path(post), { controller: "posts", action: :destroy, method: :delete, data: { confirm: "Are you sure you want to delete it?" } } %>
       </div>
     <% end %>
   </div>

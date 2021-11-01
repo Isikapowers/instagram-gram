@@ -36,6 +36,7 @@
     padding: 4px 10px;
     font-weight: 500;
   }
+  
   ul.posts{
     padding-left: 0;
     > li{
@@ -84,6 +85,7 @@ a.tab{
     color: #262626;
   }
 }
+
 .user-images{
   display: flex;
   flex-wrap: wrap;
@@ -99,6 +101,7 @@ a.tab{
     }
   }
 }
+
 .user-edit-page{
   display: flex;
   margin-top: 60px;
@@ -114,6 +117,7 @@ a.tab{
     border-left:none;
   }
 }
+
 .actions{
   width: 220px;
   border: 1px solid #dbdbdb;
@@ -145,6 +149,7 @@ a.tab{
     text-align: right;
     font-weight: 600;
   }
+
 .avatar{
     height: 38px;
     width: 38px;
