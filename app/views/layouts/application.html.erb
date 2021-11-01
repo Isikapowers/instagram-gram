@@ -32,7 +32,8 @@
          <a><i class="fa fa-heart"></i></a>
          <% if user_signed_in? %>
           <a href="<%= user_path(current_user) %>"><i class="fa fa-user"></i></a>
-          <a href="<%= destroy_user_session_path %>"><i class="fa fa-sign-out"></i></a>
+          <!-- <a href="<%= destroy_user_session_path %>"><i class="fa fa-sign-out"></i></a> -->
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
         <% else %>
           <a href="<%= new_user_session_path%>"><i class="fa fa-sign-in"></i></a>
         <% end %>
