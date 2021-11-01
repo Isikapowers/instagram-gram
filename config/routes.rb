@@ -3,13 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'users/sessions' }
   root to: 'home#index'
 
-  # namespace :devise do
-  #   get '/', to: 'sessions#new'
-  #   # get '/users/:id', to: 'sessions#create'
-  # end
-
   resources :users, only: [:show, :edit, :update]
-  # get '/users/:id', to: 'users#show'
 
   resources :posts, only: [:new, :create, :index, :destroy]
 
