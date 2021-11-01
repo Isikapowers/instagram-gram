@@ -44,7 +44,7 @@
 
 ## Tools Used
 
-|                |
+|   Development  |
 | :-------------:| 
 | Ruby 2.7.2     | 
 | Rails 5.2.6    | 
