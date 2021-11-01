@@ -20,7 +20,8 @@
      </div>
     <div class="col-sm-9">
       <p class="username"><%= current_user.username %></p>
-      <a class="change-photo" href="">Change Profile Photo</a>
+      <a class="change-photo" >Change Profile Photo</a><br>
+      <%= f.file_field :avatar %>
     </div>
   </div>
   <div class="form-group row">
