@@ -36,7 +36,11 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
 gem 'kaminari'
+gem "mini_magick"
+gem "image_processing", ">= 1.2"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
