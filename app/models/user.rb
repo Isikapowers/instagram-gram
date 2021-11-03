@@ -4,6 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  devise :omniauthable, omniauth_providers: [:google_oauths]
+
   has_many :posts, dependent: :destroy
   has_one_attached :avatar
+
+  def self.from_google(email:, full_name:, uid:, avatar_url:)
+    return nil unless email =~ /@mybusiness.com\z/
+    create_with(uid: uid, full_name: full_name, avatar_url: avatar_url).find_or_create_by!(email: email)
+  end  
 end
